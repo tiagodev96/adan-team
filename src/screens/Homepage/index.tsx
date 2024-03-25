@@ -2,13 +2,17 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { people } from "./constants";
 import { renderAvatars } from "./utils";
+import Image from "next/image";
 
 const HomepageScreen = () => {
   return (
     <>
-      <h1 className="text-2xl md:text-4xl text-center font-bold mb-10">
-        Conheça nosso time!
-      </h1>
+      <div className="flex flex-col items-center">
+        <Image src="/logo-adan.webp" width={150} height={150} alt="Adan Logo" />
+        <h1 className="text-2xl md:text-4xl text-center font-bold mb-10">
+          Conheça nosso time!
+        </h1>
+      </div>
 
       <div className="flex flex-row flex-wrap items-center justify-center mb-10 w-full">
         <Tabs defaultValue="All" className="w-full">

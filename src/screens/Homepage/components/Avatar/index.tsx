@@ -27,7 +27,7 @@ const Avatar = ({ person }: AvatarProps) => {
       <TooltipTrigger>
         <Drawer>
           <DrawerTrigger asChild>
-            <ShadAvatar className="w-[100px] h-[100px] md:w-[150px] md:h-[150px] -mx-3 my-2 hover:-translate-x-6 transition-all duration-300">
+            <ShadAvatar className="w-[125px] h-[125px] md:w-[150px] md:h-[150px] -mx-3 my-2 hover:-translate-x-6 transition-all duration-300">
               <AvatarImage className="object-cover" src={image} />
               <AvatarFallback className="text-neutral-50 bg-neutral-950 text-4xl font-bold border-neutral-50 border-[2px]">
                 {initials}

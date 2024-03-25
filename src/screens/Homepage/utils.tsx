@@ -9,9 +9,11 @@ export const defineBadgeVariant = (role: string) =>
 
 const renderPeopleAvatars = (people: Person[]) => (
   <TooltipProvider delayDuration={150}>
-    {people.map((person) => (
-      <Avatar key={person.id} person={person} />
-    ))}
+    <div className="flex flex-row flex-wrap w-full">
+      {people.map((person) => (
+        <Avatar key={person.id} person={person} />
+      ))}
+    </div>
   </TooltipProvider>
 );
 
