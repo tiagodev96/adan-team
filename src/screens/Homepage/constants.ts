@@ -159,7 +159,7 @@ export const people = [
     id: 14,
     name: "Tiago Carneiro Batista",
     roles: ["Fullstack", "Scrum Master"],
-    image: "/tiago-carneiro-batista.webp",
+    image: "/Tiago-Carneiro-Batista.webp",
     initials: "TB",
     phone: "5571999010396",
     links: {
