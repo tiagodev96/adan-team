@@ -15,6 +15,25 @@ const renderPeopleAvatars = (people: Person[]) => (
   </TooltipProvider>
 );
 
-export const renderAvatars = ({ people }: PeopleProps) => {
-  return renderPeopleAvatars(people);
+export const renderAvatars = ({
+  people,
+  roleFilter,
+}: PeopleProps & { roleFilter?: string }) => {
+  let filteredPeople = people;
+
+  if (roleFilter) {
+    if (roleFilter === "Other") {
+      filteredPeople = people.filter((person) =>
+        person.roles.some(
+          (role) => !["Frontend", "Backend", "Fullstack"].includes(role)
+        )
+      );
+    } else {
+      filteredPeople = people.filter((person) =>
+        person.roles.includes(roleFilter)
+      );
+    }
+  }
+
+  return renderPeopleAvatars(filteredPeople);
 };
